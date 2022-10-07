@@ -22,7 +22,11 @@ function getName() {
 
 
 function validateYear(year) {
-  if (!year || year.value > 2022) {
+  if (!year){
+    alert('Year cannot be empty.');
+    return false;
+  }
+  if (year.value > 2022) {
     alert("Year must be less than or equal to this year");
     return false;
   }
@@ -30,16 +34,24 @@ function validateYear(year) {
 }
 
 function validateMonth(month) {
-  if (!month || month.value > 12 || month.value < 1) {
-    document.getElementById('month_errors').innerHTML = "Month must be between 1 and 12";
+  if (!month){
+    alert('Month cannot be empty.');
+    return false;
+  }
+  if (month.value > 12 || month.value < 1) {
+    alert("Month must be between 1 and 12");
     return false;
   }
   return true;
 }
 
 function validateDay(day) {
+  if (!day.value){
+    alert('Day cannot be empty.');
+    return false;
+  }
   if (!day || day.value < 1 || day.value > 31) {
-    document.getElementById('day_errors').innerHTML = "Day must be between 1 and 31";
+    alert("Day must be between 1 and 31");
     return false;
   }
   return true;
