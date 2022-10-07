@@ -14,6 +14,10 @@ function getName() {
   const isValidYear = validateYear(year);
   const isValidMonth = validateMonth(month);
   const isValidDay = validateDay(day);
+  if (isValidYear && isValidMonth && isValidDay) {
+    const akanName = getAkanName(parseInt(day.value), parseInt(month.value), year.value, gender);
+    document.getElementById('akan_name').innerHTML = `Your Akan name is ${akanName}`
+  }
 }
 
 
