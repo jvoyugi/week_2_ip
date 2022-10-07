@@ -30,3 +30,11 @@ function validateMonth(month) {
   }
   return true;
 }
+
+function validateDay(day) {
+  if (!day || day.value < 1 || day.value > 31) {
+    document.getElementById('day_errors').innerHTML = "Day must be between 1 and 31";
+    return false;
+  }
+  return true;
+}
