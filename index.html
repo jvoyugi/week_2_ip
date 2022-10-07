@@ -45,7 +45,13 @@
       </div>
       <div class="col-md-6">
         <form id="akan_name_form">
-          <strong><em>Enter your birth date and click submit:</em></strong>
+          <div>
+            <strong>
+              <em>Enter your birth date and click submit:</em>
+            </strong>
+            <br/>
+            <span class="text-info" id="akan_name"></span>
+          </div>
           <div>
             <label for="year">Year</label>
             <input
@@ -105,7 +111,6 @@
               <label class="form-check-label" for="female_gender">Female</label>
             </div>
           </div>
-          <div class="p-3" id="akan_name"></div>
           <button
             type="button"
             onClick="getName()"
