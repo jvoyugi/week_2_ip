@@ -13,3 +13,12 @@ function getName() {
   let gender = document.querySelector('input[name="gender"]:checked').value;
   
 }
+
+
+function validateYear(year) {
+  if (!year || year.value > 2022) {
+    document.getElementById('year_errors').innerHTML = "Year must be less than or equal to this year";
+    return false;
+  }
+  return true;
+}
