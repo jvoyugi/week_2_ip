@@ -11,7 +11,9 @@ function getName() {
   let month = document.getElementById('month');
   let day = document.getElementById('day');
   let gender = document.querySelector('input[name="gender"]:checked').value;
-  
+  const isValidYear = validateYear(year);
+  const isValidMonth = validateMonth(month);
+  const isValidDay = validateDay(day);
 }
 
 
