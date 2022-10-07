@@ -22,7 +22,7 @@ function getName() {
 
 
 function validateYear(year) {
-  if (!year){
+  if (!year || year.value.split("").length === 0) {
     alert('Year cannot be empty.');
     return false;
   }
@@ -34,23 +34,23 @@ function validateYear(year) {
 }
 
 function validateMonth(month) {
-  if (!month){
+  if (!month || !month.value.split("").length === 0) {
     alert('Month cannot be empty.');
     return false;
   }
-  if (month.value > 12 || month.value < 1) {
-    alert("Month must be between 1 and 12");
+  if (month.value > 12 || month.value <= 0) {
+    alert("Month must be between 1(January) and 12(December)");
     return false;
   }
   return true;
 }
 
 function validateDay(day) {
-  if (!day.value){
+  if (!day || !day.value.split("").length === 0) {
     alert('Day cannot be empty.');
     return false;
   }
-  if (!day || day.value < 1 || day.value > 31) {
+  if (!day || day.value <= 0 || day.value > 31) {
     alert("Day must be between 1 and 31");
     return false;
   }
@@ -61,5 +61,6 @@ function getAkanName(day, month, year, gender) {
   let century = parseInt(year.substring(0, 2));
   let last_year_digits = parseInt(year.substring(2, 4));
   let dayOfTheWeek = parseInt(((century / 4) - 2 * century - 1) + (5 * last_year_digits / 4) + (26 * (month + 1) / 10) + day) % 7
+  console.log(dayOfTheWeek)
   return gender == "male" ? MALE_AKAN_NAMES[dayOfTheWeek] : FEMALE_AKAN_NAMES[dayOfTheWeek];
 }
