@@ -17,28 +17,35 @@
 
   <body>
     <div class="container-fluid row">
-      <div class="col-sm-6">
-          <div>
-            This program calculates the day of the week you were born and the
-            gives displays your Akan name.
-            <a href="https://en.wikipedia.org/wiki/Akan_names" target="_blank">
-              Akan names
-            </a>
-            are derived from Ghanian culture. Frequently in Ghana, children of
-            the
-            <a href="https://en.wikipedia.org/wiki/Akan_people" target="_blank">
-              Akan people
-            </a>
-            are given their first name as a 'day name' which corresponds to the
-            day in the week they were born. A summary of the names and their
-            meanings can be found
-            <a
-              href="https://yen.com.gh/115080-akan-names-meanings.html"
-              target="_blank"
-              >here</a
-            >.
-          </div>
-        <form id="akan_name_form" class="col-sm-6">
+      <div class="text-center p-3">
+        <h2>
+          Find Your Akan Name
+        </h2>
+      </div>
+      <div class="col-md-6">
+        <div>
+          This program calculates the day of the week you were born and the
+          gives displays your Akan name.
+          <a href="https://en.wikipedia.org/wiki/Akan_names" target="_blank">
+            Akan names
+          </a>
+          are derived from Ghanian culture. Frequently in Ghana, children of the
+          <a href="https://en.wikipedia.org/wiki/Akan_people" target="_blank">
+            Akan people
+          </a>
+          are given their first name as a 'day name' which corresponds to the
+          day in the week they were born. A summary of the names and their
+          meanings can be found
+          <a
+            href="https://yen.com.gh/115080-akan-names-meanings.html"
+            target="_blank"
+            >here</a
+          >.
+        </div>
+      </div>
+      <div class="col-md-6">
+        <form id="akan_name_form">
+          <strong><em>Enter your birth date and click submit:</em></strong>
           <div>
             <label for="year">Year</label>
             <input
@@ -108,6 +115,7 @@
             Submit
           </button>
         </form>
+      </div>
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
