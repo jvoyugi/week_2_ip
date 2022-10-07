@@ -22,3 +22,11 @@ function validateYear(year) {
   }
   return true;
 }
+
+function validateMonth(month) {
+  if (!month || month.value > 12 || month.value < 1) {
+    document.getElementById('month_errors').innerHTML = "Month must be between 1 and 12";
+    return false;
+  }
+  return true;
+}
