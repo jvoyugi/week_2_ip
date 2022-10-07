@@ -23,7 +23,7 @@ function getName() {
 
 function validateYear(year) {
   if (!year || year.value > 2022) {
-    document.getElementById('year_errors').innerHTML = "Year must be less than or equal to this year";
+    alert("Year must be less than or equal to this year");
     return false;
   }
   return true;
@@ -48,7 +48,6 @@ function validateDay(day) {
 function getAkanName(day, month, year, gender) {
   let century = parseInt(year.substring(0, 2));
   let last_year_digits = parseInt(year.substring(2, 4));
-  console.log(day, month, century, last_year_digits, gender);
-  let dayOfTheWeek = parseInt((((century / 4) - 2 * century - 1) + ((5 * last_year_digits / 4)) + ((26 * (month + 1) / 10)) + day)) % 7
+  let dayOfTheWeek = parseInt(((century / 4) - 2 * century - 1) + (5 * last_year_digits / 4) + (26 * (month + 1) / 10) + day) % 7
   return gender == "male" ? MALE_AKAN_NAMES[dayOfTheWeek] : FEMALE_AKAN_NAMES[dayOfTheWeek];
 }
